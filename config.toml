@@ -1,9 +1,9 @@
-baseURL = ""
+baseURL = "miriinae.github.io"
 
 languageCode = "ko-kr"
 defaultContentLanguage = "ko"
 
-title = "Blog Name"
+title = "Miriinae"
 copyright = "Copyright 2020-{year} Miriinae. All rights reserved."
 
 theme = "solid"
