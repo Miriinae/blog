@@ -15,19 +15,19 @@ summaryLength = 4
         identifier = "about"
         name = "about"
         title = "About"
-        url = "/about/"
+        url = "about/"
         weight = -110
     [[menu.main]]
         identifier = "blog"
         name = "blog"
         title = "Blog"
-        url = "/posts/"
+        url = "posts/"
         weight = -100
     [[menu.main]]
         identifier = "projects"
         name = "projects"
         title = "Projects"
-        url = "/projects/"
+        url = "projects/"
         weight = -120
 
 [params]
