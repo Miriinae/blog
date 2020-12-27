@@ -1,0 +1,23 @@
+// theme color hex
+$theme-black_hex: #291e17;
+$theme-white_hex: #ebe3de;
+$theme-whiter_hex: #f8f5f2;
+
+// css variable
+:root {
+    --color-black:     #{$theme-black_hex};
+    --color-black-33:  #{$theme-black_hex + "33"};
+    --color-white:     #{$theme-white_hex};
+    //--color-white-55:  #{$theme-white_hex + "55"};
+    --color-whiter:    #{$theme-whiter_hex};
+    --color-whiter-55: #{$theme-whiter_hex + "55"};
+}
+
+// use this variables
+$color-black:           var(--color-black);
+$color-border-weak:     var(--color-black-33);
+$color-main_background: var(--color-white);
+$color-background:      var(--color-whiter);
+$color-shadow:          var(--color-whiter-55);
+
+$border-radius: 5px;

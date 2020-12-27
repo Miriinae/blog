@@ -1,0 +1,14 @@
+<ul class="post_list">
+  {{ range .Pages }}
+    <li class="post_summary">
+      <h3>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h3>
+      {{if eq .Params.Type "series_layout" }}
+      <p class="series_post_tag"></p>
+      {{end}}
+      <div class="meta">{{ .Date.Format "2006-01-02" }}</div>
+      <div>{{ .Summary }}</div>
+    </li>
+  {{ end }}
+</ul>

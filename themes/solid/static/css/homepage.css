@@ -1,0 +1,64 @@
+/****************
+ * homepage.css *
+ ****************/
+
+/* homepage main content */
+.homepage-main {
+    padding: 0 10vw;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.homepage-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "object menu";
+    justify-content: center;
+    align-content: center;
+    gap: 1vmin;
+    grid-area: top;
+}
+/* representation object */
+#rep_object {
+    grid-area: object;
+    justify-self: end;
+    align-self: end;
+    content: "";
+    width: 40vmin;
+    height: 40vmin;
+    background-color: #291e17;
+    border-radius: 5px;
+
+    box-shadow: 0 10px 60px #e4ab8566;
+
+    min-width: 8rem;
+    min-height: 8rem;
+}
+/* homepage main menu */
+#homepage-menu {
+    grid-area: menu;
+    justify-self: start;
+    align-self: start;
+    width: 40vmin;
+    height: 40vmin;
+
+    min-width: 8rem;
+    min-height: 8rem;
+}
+#homepage-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#homepage-menu a {
+    text-decoration: none;
+}
+#homepage-menu span {
+    font-size: calc(1rem + 9vmin);
+    
+    font-weight: 900;
+    line-height: 110%;
+}

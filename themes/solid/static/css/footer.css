@@ -1,0 +1,17 @@
+/**************
+ * footer.css *
+ **************/
+
+/* footer */
+#footer {
+    grid-area: footer;
+    width: 100%;
+    height: 3rem;
+
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background-color: #ebe3de;
+}

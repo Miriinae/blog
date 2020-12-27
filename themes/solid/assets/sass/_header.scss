@@ -1,0 +1,153 @@
+/**********
+ * HEADER *
+ **********/
+
+/* header */
+header#header {
+    grid-area: header;
+    @include grid(
+        4rem auto 4rem,
+        3rem,
+        "left center right",
+    );
+    @include size(100%, 100%);
+
+    background-color: $color-main_background;
+    color: $color-black;
+}
+
+/* header title */
+.header__title {
+    grid-area: center;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.header__title a {
+    font: {
+        size: 1rem;
+        weight: 800;
+    };
+    white-space: nowrap;
+
+    margin: auto;
+    padding: 0;
+}
+
+/* header search button */
+.header__search_btn {
+    display: none;
+}
+
+/* clickable area for search button */
+.header__search_btn__icon {
+    grid-area: right;
+
+    position: relative;
+    
+    @include size(1rem, 1rem);
+    margin: auto;
+
+    cursor: pointer;
+}
+
+/* circle for search button icon */
+.header__search_btn__icon::before {
+    content: " ";
+
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    @include size(0.6rem, 0.6rem);
+
+    background-color: transparent;
+
+    border: {
+        width: 2px;
+        style: solid;
+        color: $color-black;
+        radius: 100%;
+    }
+
+    transition: all 120ms ease-out;
+    transform: translate(-1px, -1px);
+}
+/* if checked, make it '\' of X shape */
+.header__search_btn:checked + .header__search_btn__icon::before {
+    @include size(2px, 1.3rem);
+    border: none;
+    border-radius: 0;
+
+    background-color: $color-black;
+
+    transform-origin: top;
+    transform: translate(0.9rem) rotate(45deg);
+}
+
+/* stick object for search button icon */
+.header__search_btn__icon::after {
+    content: " ";
+
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include size(2px, 0.5rem);
+    
+    background-color: $color-black;
+
+    transition: all 120ms ease-out;
+    transform-origin: top;
+    transform: translate(0.6rem, 0.6rem) rotate(-45deg);
+}
+/* if checked, make it '/' of X shape */
+.header__search_btn:checked + .header__search_btn__icon::after {
+    transform: rotate(-45deg);
+    height: 1.3rem;
+}
+
+
+
+/* search area */
+#search_area {
+    display: none;
+    position: fixed;
+
+    background-color: $color-main_background;
+
+    margin: 3rem 0 0 0;
+    @include size(100%, 100%);
+
+    z-index: 4;
+}
+/* if checked, make it show */
+.header__search_btn:checked ~ #search_area {
+    display: block;
+}
+/* search bar in #search_area */
+input[type="search"] {
+    @include size(100%, auto);
+
+    line-height: normal;
+
+    padding: 0.8rem 0.5rem;
+    margin: auto 0;
+
+    border: {
+        width: 0 0 2px 0;
+        style: solid;
+        color: $color-background;
+        radius: 0;
+    };
+
+    outline-style: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-color: $color-background;
+    color: $color-black;
+}

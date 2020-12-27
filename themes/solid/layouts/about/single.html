@@ -1,0 +1,16 @@
+{{ define "title" }}
+  <!-- This will override the default value set in baseof.html; i.e., "{{.Site.Title}}" in the original example-->
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+  <main class="section__main">
+    <div class="section__title">
+      <h1 class="section__title__cur">{{ .Title }}</h1>
+    </div>
+    <div class="section__contents">
+      <div class="post_article">
+        {{ .Content }}
+      </div>
+    </div>
+  </main>
+{{ end }}

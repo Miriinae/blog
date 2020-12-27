@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <article class="section__main">
+    <section class="section__title">
+      <h3 class="section__title__parent">
+        <a href="{{ .Parent.Permalink }}">/{{ if ne .Parent.Title .Site.Title }}{{ .Parent.Title }}/{{ end }}</a>
+      </h3>
+      <h1 class="section__title__cur">{{ $.Param "title" }}</h1>
+      <section>
+        {{ .Content }}
+      </section>
+    </section>
+    <section class="section__contents">
+      {{ .Render "summary" }}
+    </section>
+  </article>
+{{ end }}

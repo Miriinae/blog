@@ -1,0 +1,60 @@
+/************
+ * main.css *
+ ************/
+
+/* the main area that displays contents */
+#content {
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    background-color: #ebe3de;
+
+    height: 100%;
+}
+
+/* main area for list page */
+.main_area {
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    grid-template-rows: auto;
+    grid-template-areas: "title content";
+    justify-items: stretch;
+    align-items: stretch;
+    gap: 2rem;
+
+    padding: 5rem;
+    margin: 0;
+    max-width: 1000px;
+}
+/* title area, including extra info(categories, tags, ...) */
+.title_area {
+    grid-area: title;
+    text-align: right;
+}
+/* parent url */
+.title_area__parent {
+    display: inline-block;
+
+    opacity: 0.8;
+}
+/* current url name */
+.title_area__cur {
+    display: inline-block;
+
+    margin-bottom: 1.5rem;
+}
+
+/* content area, including post list */
+.content_area {
+    grid-area: content;
+    align-self: start;
+
+    overflow: visible;
+
+    padding: 0;
+}
+.content_area * {
+    color: #291e17;
+}

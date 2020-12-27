@@ -1,0 +1,123 @@
+/************
+ * list.css *
+ ************/
+
+/* inline list */
+.inline-list {
+    list-style-type: none;
+}
+.inline-list li {
+    display: inline-block;
+    background-color: #f8f5f2;
+    border-radius: 5px;
+    border: 1px solid transparent;
+
+    box-sizing: border-box;
+
+    padding: 0.2rem 0.5rem;
+    margin: 0.2rem 0.02rem;
+
+    transition: border-color 120ms ease;
+}
+.inline-list li:hover {
+    border-color: #291e1755;
+}
+.inline-list .count {
+    display: inline-block;
+    font-size: 0.9rem;
+
+    opacity: 0.5;
+}
+
+/* list for categories */
+.category-list {
+    margin-top: 1rem;
+}
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    margin-bottom: 0.5rem;
+}
+
+/* topdown list */
+.topdown-list {
+    list-style-type: none;
+    width: max-content;
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+.topdown-list li {
+    display: block;
+
+    border-radius: 0;
+    margin: 0;
+    padding: 0.2rem 0.5rem;
+
+    border-style: solid;
+    border-color: transparent transparent #a87c6133 transparent;
+    border-width: 1.2px;
+
+    background-color: #f8f5f2;
+
+    transition: border-color 120ms ease;
+}
+.topdown-list .count {
+    display: inline-block;
+    font-size: 0.9rem;
+
+    opacity: 0.5;
+}
+.topdown-list li:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.topdown-list li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-color: transparent;
+}
+.topdown-list li:hover {
+    border-color: #291e1755;
+}
+
+/* current category in category list */
+.cur_category {
+    background-color:#291e17 !important;
+    color: #f8f5f2;
+}
+.cur_category .count {
+    color: #f8f5f2;
+}
+
+/* current tag in tag list */
+.cur_tag {
+    background-color:#291e17 !important;
+    color: #f8f5f2;
+}
+.cur_tag .count {
+    color: #f8f5f2;
+}
+
+
+
+
+
+/* breadcrumb */
+.nav {
+    opacity: 0.5;
+}
+.nav li{
+    display: inline-block;
+
+    font-size: 0.9rem;
+}
+.nav li:nth-child(n)::after {
+    display: inline-block;
+    content: ">";
+}
+.active {
+    display: none !important;
+}

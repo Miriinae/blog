@@ -1,0 +1,25 @@
+.post_list {
+    padding: 0;
+    margin: 0;
+
+    background-color: #f8f5f2;
+    color: #291e17;
+    border-radius: 5px;
+    border: 1px solid #291e17;
+
+    box-shadow: 0 10px 60px #f8f5f266;
+
+    list-style-type: none;
+}
+.post_group {
+    padding: 0;
+    width: 50%;
+}
+.post_group_key {
+    padding: 0;
+    margin: 0;
+}
+.post_list ul {
+    list-style-type: none;
+    padding: 0;
+}

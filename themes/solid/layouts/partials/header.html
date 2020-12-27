@@ -1,0 +1,10 @@
+<header id="header">
+    <div class="header__title">
+        <a href="{{ .Site.BaseURL }}">
+            {{.Site.Title}}
+        </a>
+    </div>
+    <input type="checkbox" id="search_btn" class="header__search_btn">
+    <label for="search_btn" class="header__search_btn__icon"></label>
+    {{ partial "search.html" . }}
+</header>

@@ -1,0 +1,35 @@
+/***********
+ * Summary *
+ ***********/
+
+.post_summary {
+    padding: 0.5rem 2rem;
+    border: {
+        color: $color-border-weak;
+        style: solid;
+        width: 0 0 1.2px 0;
+    };
+}
+.post_summary:last-child {
+    border-width: 0;
+}
+.post_summary .meta {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.series_post_tag {
+    display: none;
+}
+.series_post_tag::before {
+    content: "series";
+    font-size: 0.8rem;
+
+    display: inline-block;
+
+    padding: 0rem 0.3rem;
+    border-radius: 5px;
+    
+    background-color: #fb9ea9;
+    color: #471f24;
+}

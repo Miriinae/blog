@@ -1,0 +1,28 @@
+/*******************
+ * extra-style.css *
+ *******************/
+
+ /* text selection color */
+::-moz-selection { 
+    color: #f0d9c8;
+    background: #291e1788;
+}
+::selection {
+    color: #f0d9c8;
+    background:  #291e1788;
+}
+
+/* scrollbar style */
+::-webkit-scrollbar {
+    background-color: #ebe3de;
+
+    width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #291e1788;
+}
+/* for firefox */
+:root {
+    scrollbar-color: #291e1788 #ebe3de;
+    scrollbar-width: normal;
+}

@@ -1,0 +1,149 @@
+/**************
+ * header.css *
+ **************/
+
+/* header */
+#header {
+    display: grid;
+    grid-template-columns: 4rem auto 4rem;
+    grid-template-rows: 3rem;
+    grid-template-areas: "left center right";
+    position: relative;
+    height: auto;
+    width: 100%;
+    justify-items: stretch;
+    align-items: stretch;
+
+    height: 100%;
+
+    grid-area: header;
+
+    background-color: #ebe3de;
+    color: #291e17;
+}
+
+/* header title */
+.header__title {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    white-space: nowrap;
+
+    grid-area: center;
+}
+.header__title a {
+    font-size: 1rem;
+    font-weight: 800;
+    margin: auto;
+    padding: 0;
+}
+
+/* header search button */
+.header__search_btn {
+    display: none;
+}
+
+/* clickable area for search button */
+.header__search_btn__icon {
+    position: relative;
+    grid-area: right;
+    width: 1rem;
+    height: 1rem;
+    margin: auto;
+
+    /*background-color: #99f126;
+    border: 0.5rem solid #99f126;
+    border-radius: 100%;*/
+    cursor: pointer;
+}
+
+/* circle for search button icon */
+.header__search_btn__icon::before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: transparent;
+
+    border-style: solid;
+    border-width: 2px;
+    border-color: #291e17;
+    border-radius: 100%;
+
+    transform: translate(-1px, -1px);
+
+    margin: auto;
+
+    transition: all 120ms ease-out;
+}
+/* if checked, make it '\' of X shape */
+.header__search_btn:checked + .header__search_btn__icon::before {
+    width: 2px;
+    height: 1.3rem;
+    border: none;
+    border-radius: 0;
+    background-color: #291e17;
+
+    transform-origin: top;
+    transform: translate(0.9rem) rotate(45deg);
+}
+
+/* handle for search button icon */
+.header__search_btn__icon::after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0.5rem;
+    background-color:#291e17;
+
+    transition: all 120ms ease-out;
+    transform-origin: top;
+    transform: translate(0.6rem, 0.6rem) rotate(-45deg);
+}
+/* if checked, make it '/' of X shape */
+.header__search_btn:checked + .header__search_btn__icon::after {
+    transform: rotate(-45deg);
+    height: 1.3rem;
+}
+
+
+
+/* search area */
+#search_area {
+    display: none;
+    position: fixed;
+    background-color: #ebe3de;
+    z-index: 4;
+    margin: 3rem 0 0 0;
+    width: 100%;
+    height: 100%;
+}
+/* if checked, make it show */
+.header__search_btn:checked ~ #search_area {
+    display: block;
+}
+/* search bar in #search_area */
+input[type="search"] {
+    width: 100%;
+    height: auto;
+    line-height: normal;
+    padding: 0.8rem 0.5rem;
+    margin: auto 0;
+    border-width: 0 0 2px 0;
+    border-style: solid;
+    border-color: #ebe3de;
+    border-radius: 0;
+    outline-style: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    background-color: #ebe3de44;
+    color: #291e17;
+}

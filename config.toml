@@ -1,0 +1,40 @@
+baseURL = "darkcm.github.io"
+
+languageCode = "ko-kr"
+defaultContentLanguage = "ko"
+
+title = "Blog Name"
+copyright = "Copyright 2020-{year} Miriinae. All rights reserved."
+
+theme = "solid"
+
+summaryLength = 4
+
+[menu]
+    [[menu.main]]
+        identifier = "about"
+        name = "about"
+        title = "About"
+        url = "/about/"
+        weight = -110
+    [[menu.main]]
+        identifier = "blog"
+        name = "blog"
+        title = "Blog"
+        url = "/posts/"
+        weight = -100
+    [[menu.main]]
+        identifier = "projects"
+        name = "projects"
+        title = "Projects"
+        url = "/projects/"
+        weight = -120
+
+[params]
+  AuthorName = "Your Name"
+  subtitle = "a place for testing."
+
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+    series = "series"

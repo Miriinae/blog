@@ -1,0 +1,39 @@
+@mixin grid(
+    $columns,
+    $rows,
+    $areas,
+    $justify: stretch,
+    $align: stretch
+) {
+    display: grid;
+    grid: {
+        template-columns: $columns;
+        template-rows: $rows;
+        template-areas: $areas;
+    };
+    justify-content: $justify;
+    align-content: $align;
+}
+
+@mixin size(
+    $width,
+    $height
+) {
+    width: $width;
+    height: $height;
+}
+
+@mixin size-minmax(
+    $width,
+    $height,
+    $min-w: inherit,
+    $max-w: inherit,
+    $min-h: inherit,
+    $max-h: inherit
+) {
+    @include size($width, $height);
+    min-width: $min-w;
+    max-width: $max-w;
+    min-height: $min-h;
+    max-height: $max-h;
+}

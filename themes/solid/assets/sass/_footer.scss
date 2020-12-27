@@ -1,0 +1,21 @@
+/**********
+ * footer *
+ **********/
+
+/* footer */
+footer#footer {
+    grid-area: footer;
+
+    @include size(100%, 3rem);
+
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background-color: $color-main_background;
+
+    p {
+        opacity: 0.5;
+    }
+}

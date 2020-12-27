@@ -1,0 +1,32 @@
+@media (max-width: 800px) {
+    .main_area {
+        grid-template-rows: auto 5fr;
+        grid-template-columns: auto;
+        grid-template-areas: "title" "content";
+
+        padding: 0;
+
+        width: 100%;
+        max-width: 500px;
+    }
+    .title_area {
+        text-align: left;
+        padding: 1rem 2rem;
+    }
+
+    .categories {
+        align-items: flex-start;
+    }
+
+    .title_area__parent {
+        display: block;
+    }
+} 
+
+@media (max-aspect-ratio: 7/6) {
+    .homepage-header {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: auto;
+        grid-template-areas: "object" "menu";
+    }
+}

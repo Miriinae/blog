@@ -1,0 +1,75 @@
+/************
+ * Homepage *
+ ************/
+
+/* homepage main content */
+.homepage__main {
+    padding: 0 10vw;
+
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.homepage__header {
+    grid-area: top;
+
+    @include grid(
+        1fr 1fr,
+        auto,
+        "object menu",
+        center,
+        center
+    );
+    gap: 1vmin;
+}
+
+/* representation object */
+#homepage__rep_object {
+    grid-area: object;
+    justify-self: end;
+    align-self: end;
+
+    @include size-minmax(
+        40vmin, 40vmin,
+        8rem, inherit,
+        8rem, inherit
+    );
+
+    background-color: $color-black;
+    border-radius: $border-radius;
+
+    box-shadow: 0 10px 60px $color-background;
+}
+
+/* homepage main menu */
+#homepage__menu {
+    grid-area: menu;
+    justify-self: start;
+    align-self: start;
+
+    @include size-minmax(
+        40vmin, 40vmin,
+        8rem, inherit,
+        8rem, inherit
+    );
+}
+
+#homepage__menu ul {
+    list-style-type: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+#homepage__menu a {
+    text-decoration: none;
+}
+
+#homepage__menu span {
+    font-size: calc(1rem + 9vmin);
+    
+    font-weight: 900;
+    line-height: 110%;
+}

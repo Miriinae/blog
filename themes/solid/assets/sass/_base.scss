@@ -1,0 +1,82 @@
+/********
+ * Base *
+ ********/
+
+* {
+    margin: 0;
+    padding: 0;
+
+    color: $color-black;
+}
+
+html {
+    @include size(100%, 100%);
+
+    margin: 0;
+    padding: 0;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    @include grid(
+        auto,
+        3rem auto 3rem,
+        "header" "content" "footer",
+    );
+
+    @include size(100%, 100%);
+
+    margin: 0;
+    padding: 0;
+
+    background-color: $color-main_background;
+}
+
+main#content {
+    grid-area: content;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    background-color: $color-main_background;
+
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: inherit;
+}
+a:active {
+    color: inherit;
+}
+
+
+/* text selection color */
+::-moz-selection { 
+    color: #f0d9c8;
+    background: #291e1788;
+}
+::selection {
+    color: #f0d9c8;
+    background:  #291e1788;
+}
+
+/* scrollbar style */
+::-webkit-scrollbar {
+    background-color: #ebe3de;
+
+    width: 0.5rem;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #291e1788;
+}
+/* for firefox */
+:root {
+    scrollbar-color: #291e1788 #ebe3de;
+    scrollbar-width: normal;
+}

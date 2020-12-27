@@ -1,0 +1,105 @@
+/***************
+ * article.css *
+ ***************/
+
+ /* TODO: 1. clean code(Css, html) 2. port to scss 3. make archtype */ 
+
+/* actual post's area of content */
+.article {
+    padding: 2rem;
+
+    background-color: #f8f5f2;
+    color: #291e17;
+    border-radius: 5px;
+    border: 1px solid #382121;
+
+    box-shadow: 0 10px 60px #f8f5f266;
+}
+
+.comments {
+    margin-top: 0.5rem;
+    padding: 0.5rem 2rem;
+    background-color: #f8f5f2;
+    color: #291e17;
+    border-radius: 5px;
+
+    box-shadow: 0 10px 60px #f8f5f266;
+}
+
+.rel-posts {
+    margin-top: 0.5rem;
+    padding: 0;
+    background-color: #f8f5f2;
+    color: #291e17;
+    border-radius: 5px;
+
+    box-shadow: 0 10px 60px #f8f5f266;
+}
+
+.nxt-prv-post {
+    border-style: solid;
+    border-color: transparent transparent #a87c6133 transparent;
+    border-width: 0 0 1px 0;
+
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "prv nxt";
+
+    overflow: hidden;
+}
+
+.prv-post {
+    grid-area: prv;
+
+    border: 1px solid transparent;
+    border-right-color: #a87c6133;
+
+    text-overflow: ellipsis;
+
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+}
+.arrow-left {
+    position: relative;
+    float: left;
+}
+.arrow-left::after {
+    position: relative;
+    content: "<";
+}
+
+
+.nxt-post {
+    grid-area: nxt;
+
+    text-overflow: ellipsis;
+
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+}
+.arrow-right {
+    position: relative;
+    float: right;
+}
+.arrow-right::after {
+    content: ">";
+}
+
+.no-more-post {
+    display: inline-block;
+}
+.no-more-post * {
+    color: #a87c6177;
+}
+
+.rel-post {
+    padding: 0 2rem;
+}
+
+.related-post {
+    list-style-type: none;
+}
+.related-post li {
+    padding: 0.5rem 0;
+}

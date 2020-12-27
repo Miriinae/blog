@@ -1,0 +1,82 @@
+{{ define "title" }}
+  <!-- This will override the default value set in baseof.html; i.e., "{{.Site.Title}}" in the original example-->
+  {{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+  <article class="section__main">
+    <section class="section__title">
+      {{ partial "breadcrumb.html" . }}
+      <h1 class="section__title__cur">{{ .Title }}</h1>
+      <section>
+        <h4 id="date"> {{ .Date.Format "2006-01-02" }} </h4>
+        <h5 id="reading_time"> {{ math.Round (div (countwords .Content) 220.0) }} min </h5>
+      </section>
+      {{ with (.GetTerms "categories") }}
+      <section class="categories category_list">
+        <h3>Category</h3>
+        <ul class="menu-list">
+          {{ range . }}
+              <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+      {{ with (.GetTerms "tags") }}
+      <section>
+        <h3>Tags</h3>
+        <ul class="inline-list tags">
+          {{ range . }}
+              <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+    </section>
+    <div class="section__contents">
+      <section class="post_article">
+        {{ .Content }}
+      </section>
+      <section class="comments">
+        <h3>Comments</h3>
+        <script src="https://utteranc.es/client.js"
+          repo="[ENTER REPO HERE]"
+          issue-term="url"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+        </script>
+      </section>
+      <aside class="rel-posts">
+        <nav class="nxt-prv-post">
+          {{ with .NextInSection }}
+            <a href="{{ .Permalink }}" class="prv-post">
+              <p class="arrow-left"></p>
+              {{ .Title }}
+            </a>
+          {{ else }}
+            <p class="prv-post no-more-post"> <i>No More Post</i> </p>
+          {{ end }}
+          {{ with .PrevInSection }}
+            <a href="{{ .Permalink }}" class="nxt-post">
+              {{ .Title }}
+              <p class="arrow-right"></p>
+            </a>
+          {{ else }}
+            <p class="nxt-post no-more-post"> <i>No More Post</i> </p>
+          {{ end }}
+        </nav>
+        {{ $related := .Site.RegularPages.Related . | first 5 }}
+        {{ with $related }}
+        <nav class="rel-post">
+          <h3>See Also</h3>
+          <ul class="related-post">
+            {{ range . }}
+            <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+            {{ end }}
+          </ul>
+        </nav>
+        {{ end }}
+      </aside>
+    </div>
+  </article>
+{{ end }}

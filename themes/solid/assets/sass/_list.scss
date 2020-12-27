@@ -1,0 +1,191 @@
+/********
+ * List *
+ ********/
+
+/* main section for list page */
+.section__main {
+    @include grid(
+        4fr 5fr,
+        auto,
+        "title content",
+    );
+    gap: 2rem;
+
+    padding: 5rem;
+    margin: 0;
+
+    max-width: 1000px;
+}
+/* title section, including extra info(categories, tags, etc.) */
+.section__title {
+    grid-area: title;
+
+    text-align: right;
+}
+/* parent url */
+.section__title__parent {
+    display: inline-block;
+
+    opacity: 0.8;
+}
+/* current url name */
+.section__title__cur {
+    display: inline-block;
+
+    font-size: 2rem;
+}
+
+/* content section, that includs post list */
+.section__contents {
+    grid-area: content;
+    align-self: start;
+
+    padding: 0;
+
+    overflow: visible;
+}
+
+.post_list {
+    padding: 0;
+    margin: 0;
+
+    background-color: $color-background;
+    border: 1px solid $color-black;
+    border-radius: $border-radius;
+
+    box-shadow: 0 10px 60px $color-shadow;
+
+    list-style-type: none;
+}
+.post_group {
+    padding: 0;
+    width: 50%;
+}
+.post_group_key {
+    padding: 0;
+    margin: 0;
+}
+.post_list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* list for categories */
+.category-list {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
+.categories {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.categories .count {
+    display: inline-block;
+    font-size: 0.9rem;
+
+    opacity: 0.5;
+}
+
+/* list for tags */
+.tags .count {
+    display: inline-block;
+    font-size: 0.9rem;
+
+    opacity: 0.5;
+}
+
+/* inline list */
+.inline-list {
+    list-style-type: none;
+}
+.inline-list li {
+    display: inline-block;
+
+    background-color: $color-background;
+
+    border: 1px solid transparent;
+    border-radius: $border-radius;
+
+    box-sizing: border-box;
+
+    padding: 0.2rem 0.5rem;
+    margin: 0.2rem 0.02rem;
+
+    transition: border-color 120ms ease;
+}
+.inline-list li:hover {
+    border-color: $color-black;
+}
+
+/* menu list */
+.menu-list {
+    list-style-type: none;
+
+    width: max-content;
+    border-radius: $border-radius;
+}
+.menu-list li {
+    display: block;
+
+    border-radius: 0;
+    margin: 0;
+    padding: 0.2rem 0.5rem;
+
+    border: {
+        color: transparent transparent $color-border-weak transparent;
+        style: solid;
+        width: 1.2px;
+    };
+
+    background-color: $color-background;
+
+    transition: border-color 120ms ease;
+}
+.menu-list li:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.menu-list li:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-color: transparent;
+}
+.menu-list li:hover {
+    border-color: $color-black;
+}
+
+/* current category in category list */
+.cur_category {
+    background-color: $color-black !important;
+    color: $color-background;
+}
+.cur_category .count {
+    color: $color-background;
+}
+
+/* current tag in tag list */
+.cur_tag {
+    background-color: $color-black !important;
+    color: $color-background;
+}
+.cur_tag .count {
+    color: $color-background;
+}
+
+/* breadcrumb */
+.nav {
+    opacity: 0.5;
+}
+.nav li{
+    display: inline-block;
+
+    font-size: 0.9rem;
+}
+.nav li::after {
+    display: inline-block;
+    content: ">";
+}
+.active {
+    display: none !important;
+}

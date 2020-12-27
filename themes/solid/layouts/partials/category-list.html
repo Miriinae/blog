@@ -1,0 +1,17 @@
+{{ $cur_url := .Permalink }}
+{{ $post_url := (printf "%s%s" .Site.BaseURL "posts/") }}
+<section class="categories">
+    <h3>Categories</h3>
+    <ul class="menu-list">
+        <li class="{{if eq $post_url $cur_url}}cur_category{{end}}">
+            <a href="{{$post_url}}">All</a>
+            <p class="count">{{ len .Pages }}</p>
+        </li>
+        {{ range .Site.Taxonomies.categories }}
+        <li class="{{if eq .Page.Permalink $cur_url}}cur_category{{end}}">
+            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+            <p class="count">{{ .Count }}</p>
+        </li>
+        {{ end }}
+    </ul>
+</section>

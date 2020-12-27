@@ -1,0 +1,12 @@
+{{ $cur_url := .Permalink}}
+<section class="tags">
+    <h3>Tags</h3>
+    <ul class="inline-list">
+        {{ range .Site.Taxonomies.tags }}
+        <li class="{{if eq .Page.Permalink $cur_url}}cur_tag{{end}}">
+            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> 
+            <p class="count">{{ .Count }}</p>
+        </li>
+        {{ end }}
+    </ul>
+</section>

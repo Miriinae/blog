@@ -1,0 +1,107 @@
+/***************
+ * article.css *
+ ***************/
+
+$box-shadow-style: 0 10px 60px $color-shadow;
+
+/* actual post's area of content */
+.post_article {
+    padding: 2rem;
+
+    background-color: $color-background;
+    
+    border: 1px solid $color-black;
+    border-radius: $border-radius;
+    
+    box-shadow: $box-shadow-style;
+}
+
+.comments {
+    margin-top: 0.5rem;
+    padding: 0.5rem 2rem;
+
+    background-color: $color-background;
+
+    border-radius: $border-radius;
+
+    box-shadow: $box-shadow-style;
+}
+
+.rel-posts {
+    margin-top: 0.5rem;
+    padding: 0;
+
+    background-color: $color-background;
+
+    border-radius: $border-radius;
+
+    box-shadow: $box-shadow-style;
+}
+
+.nxt-prv-post {
+    @include grid(
+        1fr 1fr,
+        auto,
+        "prv nxt"
+    );
+
+    padding: 0;
+}
+
+.prv-post {
+    grid-area: prv;
+
+    border: 1px solid transparent;
+    border-right-color: $color-border-weak;
+
+    //text-overflow: ellipsis; //not working
+
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+}
+.arrow-left {
+    position: relative;
+    float: left;
+}
+.arrow-left::after {
+    position: relative;
+    content: "<";
+}
+
+
+.nxt-post {
+    grid-area: nxt;
+
+    //text-overflow: ellipsis; //not working
+
+    padding: 0.5rem 2rem 0.5rem 0.5rem;
+}
+.arrow-right {
+    position: relative;
+    float: right;
+}
+.arrow-right::after {
+    content: ">";
+}
+
+.no-more-post {
+    display: inline-block;
+}
+.no-more-post * {
+    color: $color-border-weak;
+}
+
+.rel-post {
+    border: {
+        width: 1px 0 0 0;
+        style: solid;
+        color: $color-border-weak transparent transparent transparent;
+    };
+    padding: 0 2rem;
+}
+
+.related-post {
+    list-style-type: none;
+}
+.related-post li {
+    padding: 0.5rem 0;
+}
