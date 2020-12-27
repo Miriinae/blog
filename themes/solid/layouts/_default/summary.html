@@ -2,7 +2,7 @@
   {{ range .Pages }}
     <li class="post_summary">
       <h3>
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <a href="{{ .Permalink | relURL }}">{{ .Title }}</a>
       </h3>
       {{if eq .Params.Type "series_layout" }}
       <p class="series_post_tag"></p>
