@@ -1,4 +1,5 @@
 baseURL = "miriinae.github.io"
+canonifyURLs = false
 
 languageCode = "ko-kr"
 defaultContentLanguage = "ko"
