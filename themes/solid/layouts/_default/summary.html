@@ -1,5 +1,5 @@
 <ul class="post_list">
-  {{ with .Pages }}
+  {{ if ne (len .Pages) 0 }}
   {{ range .Pages }}
     <li class="post_summary">
       <h3>
