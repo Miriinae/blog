@@ -353,6 +353,14 @@ footer#footer {
   list-style-type: none;
   padding: 0; }
 
+/* no post */
+.no-post {
+  padding: 5rem;
+  text-align: center; }
+  .no-post .emoticon {
+    font-size: 2rem;
+    opacity: 0.4; }
+
 /* list for categories */
 .category-list {
   margin-top: 1rem;
