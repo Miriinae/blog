@@ -8,6 +8,7 @@
       <h1 class="section__title__cur">{{ .Title }}</h1>
       <section>
         <h4 id="date"> {{ .Date.Format "2006-01-02" }} </h4>
+        <h4 id="last_mod"> {{ .GitInfo.AuthorDate.Format "2006-01-02" }} </h4>
         <h5 id="reading_time"> {{ math.Round (div (countwords .Content) 220.0) }} min </h5>
       </section>
     </div>
