@@ -355,7 +355,7 @@ footer#footer {
 
 /* no post */
 .no-post {
-  padding: 5rem;
+  padding: 2rem;
   text-align: center; }
   .no-post .emoticon {
     font-size: 2rem;
