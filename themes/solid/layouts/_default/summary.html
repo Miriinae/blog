@@ -1,4 +1,5 @@
 <ul class="post_list">
+  {{ with .Pages }}
   {{ range .Pages }}
     <li class="post_summary">
       <h3>
@@ -10,5 +11,10 @@
       <div class="meta">{{ .Date.Format "2006-01-02" }}</div>
       <div>{{ .Summary }}</div>
     </li>
+  {{ end }}
+  {{ else }}
+  <div>
+    <div> :( </div>
+  </div>
   {{ end }}
 </ul>
