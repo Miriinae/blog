@@ -4,6 +4,8 @@ canonifyURLs = false
 languageCode = "ko-kr"
 defaultContentLanguage = "ko"
 
+enableGitInfo = true
+
 title = "Miriinae"
 copyright = "Copyright 2020-{year} Miriinae. All rights reserved."
 
@@ -39,3 +41,8 @@ summaryLength = 4
     category = "categories"
     tag = "tags"
     series = "series"
+    
+[frontmatter]
+	date = ["date", "publishDate", "lastmod"]
+	lastmod = [":git", "lastmod", "date", "publishDate"]
+	publishDate = ["publishDate", "date"]
