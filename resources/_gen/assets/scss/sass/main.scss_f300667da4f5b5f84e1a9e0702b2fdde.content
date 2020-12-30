@@ -359,7 +359,8 @@ footer#footer {
   text-align: center; }
   .no-post .emoticon {
     font-size: 2rem;
-    opacity: 0.4; }
+    opacity: 0.4;
+    white-space: nowarp; }
 
 /* list for categories */
 .category-list {
