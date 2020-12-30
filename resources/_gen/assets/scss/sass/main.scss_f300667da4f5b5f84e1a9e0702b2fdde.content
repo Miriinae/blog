@@ -70,6 +70,9 @@ a:visited {
 a:active {
   color: inherit; }
 
+img {
+  max-width: 100%; }
+
 /* text selection color */
 ::-moz-selection {
   color: #f0d9c8;

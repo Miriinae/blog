@@ -7,9 +7,13 @@
     <div class="section__title">
       <h1 class="section__title__cur">{{ .Title }}</h1>
       <section>
-        <h4 id="date"> {{ .Date.Format "2006-01-02" }} </h4>
-        <h4 id="last_mod"> {{ .GitInfo.AuthorDate.Format "2006-01-02" }} </h4>
-        <h5 id="reading_time"> {{ math.Round (div (countwords .Content) 220.0) }} min </h5>
+        {{ $date := (.Date.Format "2006-01-02") }}
+        {{ $mod_date := (.GitInfo.AuthorDate.Format "2006-01-02") }}
+        <h4 class="date"> writed date : {{ $date }} </h4>
+        {{ if ne $date $mod_date }}
+        <h4 class="last_mod"> modified date : {{ $mod_date }} </h4>
+        {{ end }}
+        <h5 class="reading_time"> {{ math.Round (div (countwords .Content) 220.0) }} min </h5>
       </section>
     </div>
     <div class="section__contents">
