@@ -360,7 +360,7 @@ footer#footer {
   .no-post .emoticon {
     font-size: 2rem;
     opacity: 0.4;
-    white-space: nowarp; }
+    white-space: nowrap; }
 
 /* list for categories */
 .category-list {
