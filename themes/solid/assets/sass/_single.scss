@@ -14,6 +14,12 @@ $box-shadow-style: 0 10px 60px $color-shadow;
     border-radius: $border-radius;
     
     box-shadow: $box-shadow-style;
+    
+    word-break: break-all;
+}
+
+.post_article ul {
+    padding-inline-start: 40px;
 }
 
 .comments {
